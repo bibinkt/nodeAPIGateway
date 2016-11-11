@@ -1,0 +1,16 @@
+resources:
+  productDetails:
+    url: "http://localhost:8080/product/:id"
+  Inventory:
+    url: "http://localhost:8080/inventory/:id"
+  price:
+    url: "http://localhost:8080/price/:id"
+
+facades:
+  ppInfo:
+    strategy: merge
+    resources:
+      - productDetails
+      - Inventory
+      - price
+

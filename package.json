@@ -1,0 +1,48 @@
+{
+  "name": "nodeAPIGateway",
+  "version": "0.0.0",
+  "description": "An API Orchestration Layer (OL)",
+  "homepage": "",
+  "repository": {
+    "type": "git",
+    "url": ""
+  },
+  "keywords": [
+    "api",
+    "apis",
+    "orchestration",
+    "layer",
+    "http",
+    "webserver",
+    "rest"
+  ],
+  "main": "lib/assembler.js",
+  "author": {
+    "name": "",
+    "email": "",
+    "url": ""
+  },
+  "engines": {
+    "node": ">= 0.8.x"
+  },
+  "license": "MIT",
+  "dependencies": {
+    "async": "*",
+    "http-https": "*",
+    "js-yaml": "*",
+    "lodash": "^4.11.1",
+    "optimist": "*",
+    "winston": "^2.2.0",
+    "underscore": "~1.5",
+    "underscore.string": "~2",
+    "js-yaml": "~3"
+  },
+  "devDependencies": {
+    "mocha": "*",
+    "should": "*",
+    "nodemon": "*"
+  },
+  "scripts": {
+    "test": "./node_modules/mocha/bin/mocha"
+  }
+}
