@@ -1,15 +1,18 @@
-var assembler   = require('../lib/assembler');
 var http        = require('http');
+var bodyParser  = require('body-parser');
+var express     = require('express');
+var ppRouter    = require('./productServiceRouter');
+var loginService   = require('./loginService');
 
-// add some routes
-conductor.router.load({
-    getProduct: {
-        pattern: "/productDetail/:id",
-        facade: "ppInfo"
-    }
-});
+var app         = express();
 
-assembler.loadConfigFile('./config.yml');
+// use body parser so we can get info from POST and/or URL parameters
+app.use(bodyParser.urlencoded({ extended: false }));
+app.use(bodyParser.json());
 
-http.createServer(conductor.run()).listen(8000);
-console.log("server started on port 8080")
+app.get('/login',loginService.login);
+app.use('/pp', ppRouter.router);
+var port = 8000; // used to create, sign, and verify tokens
+app.listen(port);
+
+console.log("server started on port 8000");
