@@ -1,15 +1,13 @@
 
-Hi  this module responsible for API gateway & orchestrating the rest services .
-It is built on top NodeJS and is in very basic level.
+This module responsible for API gateway[Authentication,service discovery etc.] & orchestrating the micro services .
+It is built on top NodeJS and it is using JWT for creating access token.
 
-Current state
+Steps to install
 ------------------------
-Currently it just orchestrate the product mircoservices [product details,inventory,price] . These microservices again built on top
-of nodeJS+ExpressJS+cassendra . You may find the code base for microservice on below url
+1.	Clone the repo using git clone https://github.com/bibinkt/nodeAPIGateway.git
+2.	Run "npm install to install" the dependencies.
+3.	Run "node gateway\index.js" to start the local web server
 
 Next steps
-------------------------
-Below are the next step in this module .
-
-1) Implement Auth2.0
-2) 
+--------------------
+WIP
