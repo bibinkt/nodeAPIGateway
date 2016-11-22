@@ -10,9 +10,10 @@ var app         = express();
 app.use(bodyParser.urlencoded({ extended: false }));
 app.use(bodyParser.json());
 
-app.get('/login',loginService.login);
+app.use('/login',loginService.login);
+app.use('/register',loginService.register);
 app.use('/pp', ppRouter.router);
 var port = 8000; // used to create, sign, and verify tokens
 app.listen(port);
 
-console.log("server started on port 8000");
+console.log("server started on port 8001");
